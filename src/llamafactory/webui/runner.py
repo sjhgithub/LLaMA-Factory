@@ -169,7 +169,7 @@ class Runner:
             use_swanlab=get("train.use_swanlab"),
             output_dir=get_save_dir(model_name, finetuning_type, get("train.output_dir")),
             fp16=(get("train.compute_type") == "fp16"),
-            bf16=(get("train.compute_type") == "bf16"),
+            bf16=False,#(get("train.compute_type") == "bf16"),
             pure_bf16=(get("train.compute_type") == "pure_bf16"),
             plot_loss=True,
             trust_remote_code=True,
